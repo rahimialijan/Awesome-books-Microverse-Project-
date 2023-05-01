@@ -1,10 +1,10 @@
 // Book Class: Represents a Book
 
 class Book {
-  constructor(title, author, isbn) {
+  constructor(title, author, bookId) {
     this.title = title;
     this.author = author;
-    this.isbn = isbn;
+    this.bookId = bookId;
   }
 }
 
