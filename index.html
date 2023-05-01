@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
@@ -11,33 +12,93 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-secondary  px-5">
-            <a class="navbar-brand text-white" href="#">Awesome Books</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-              <div class="navbar-nav ">
-                <a class="nav-item nav-link active text-white list-page" href="#">List <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link text-white add-page" href="#">Add New</a>
-                <a class="nav-item nav-link text-white contact-page" href="#">Contact</a>
-              </div>
-            </div>
-          </nav>
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">Awesome Books</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                  <div class="navbar-nav ">
+                    <a class="nav-item nav-link active text-white list-page" href="#">List <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link text-white add-page" href="#">Add New</a>
+                    <a class="nav-item nav-link text-white contact-page" href="#">Contact</a>
+                  </div>
+                </div>
+            </div>    
+        </nav>
     </header>
 
     <section id="book-list">
-        <p>List of the books are here</p>
+        <div class="container">
+            <h1 class="display-4 text-center mt-5 text-secondary font-weight-900"><i class="bi bi-book-fill text-secondary"></i> My <span class="text-primary">Book</span> List</h1>
+            <table class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Book Id</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="new-book-list">
+
+                </tbody>
+            </table>
+        </div>
 
     </section>
 
-    <section id="add-book">
-        <p>Input fields for adding books are here</p>
+    <section  id="add-book">
+        <div class="container">
+            <h1 class="display-4 text-center mt-5 text-secondary font-weight-900">Add a New Book</h1>
+            <form id="book-submit" class='mt-5'>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="bookId">Book Id</label>
+                    <input type="text" id="bookId" class="form-control">
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                    <input type="submit" value="Add Book" class="btn btn-secondary px-5 py-2">
+                </div>
+            </form>
+        </div>
     </section>
 
     <section id="contact">
-        <p>Here is our contact information</p>
+        <div class="container">
+            <h1 class="display-4 text-center mt-5 text-secondary font-weight-900">Contact Information</h1>
+            <div class="container">
+                <p >Do you have any questions or you just want say hello?</p>
+            <p >You can reach out to us!</p>
+            <ul >
+               <li>Email: alijanrahimi1990@gmail.com</li>
+                <li>Phone Number: +923319197112</li>
+                <li>Address: Abbottabad, Pakistan</li>
+            </ul>
+            </div>
+        </div>
     </section>
 
-    <script src="index.js"></script>
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <footer class="text-center text-lg-start bg-secondary" >
+      <!-- Copyright -->
+      <div class="text-center text-white p-3">
+        © 2023 Copyright:
+        <a class="text-white" href="#">All Rights Reserved / No Rights Reserved</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+    <script src="modules/index.js" type="module"></script>
 </body>
 </html>
