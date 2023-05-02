@@ -17,7 +17,7 @@ class StoreBook {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(bookId) {
+  static removeStoredBook(bookId) {
     const books = StoreBook.getBook();
     books.forEach((book, index) => {
       if (book.bookId === bookId) {

@@ -32,7 +32,9 @@ class UI {
     if (targetElement.classList.contains('delete')) {
       targetElement.parentElement.parentElement.remove();
     }
+    
   }
+
 }
 
 const list = document.querySelector('.list-page');
