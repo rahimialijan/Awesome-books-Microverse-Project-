@@ -24,10 +24,8 @@ class UI {
     const div = document.createElement("div");
     div.className = `w-50 alert alert-${className}`;
     div.appendChild(document.createTextNode(message));
-
      const addBook = document.querySelector("#book-submit");
      addBook.insertBefore(div, addBook.firstChild);
-
      setTimeout(() => document.querySelector(".alert").remove(), 2000);
   }
 

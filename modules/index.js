@@ -2,8 +2,7 @@ import Book from "./book.js";
 import StoreBook from "./store.js";
 import UI from "./ui.js";
 
-// event for display books
-document.addEventListener("DOMContentLoaded", UI.displayBook);
+
 
 // event for adding new books(using form Id)
 document.getElementById("book-submit").addEventListener("submit", (e) => {
@@ -34,4 +33,11 @@ document.getElementById("book-submit").addEventListener("submit", (e) => {
 // event: remove the book form the list
 document.getElementById("new-book-list").addEventListener("click", (e) => {
   UI.removeBook(e.target);
+  StoreBook.removeBook(e.target);
+  UI.showAlert('Book Deleted', "success")
+
 });
+
+
+// event for display books
+document.addEventListener("DOMContentLoaded", UI.displayBook);
