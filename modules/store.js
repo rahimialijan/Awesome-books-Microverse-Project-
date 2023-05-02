@@ -15,15 +15,13 @@ class StoreBook {
     const books = StoreBook.getBook();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
-    
   }
 
-  static removeBook(bookId) {
+  static removeBook(book) {
     const books = StoreBook.getBook();
-   books.splice(books.indexOf(book), 1);
-    localStorage.setItem("books", JSON.stringify(books));
+    books.splice(books.indexOf(book), 1);
+    localStorage.setItem('books', JSON.stringify(books));
   }
 }
 
 export default StoreBook;
-
