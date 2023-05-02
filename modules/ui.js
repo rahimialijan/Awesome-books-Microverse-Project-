@@ -8,8 +8,8 @@ class UI {
   }
 
   static addNewBook(book) {
-    const list = document.getElementById('new-book-list');
-    const tableRow = document.createElement('tr');
+    const list = document.getElementById("new-book-list");
+    const tableRow = document.createElement("tr");
 
     tableRow.innerHTML = `
           <td>${book.title}</td>
@@ -20,16 +20,25 @@ class UI {
     list.appendChild(tableRow);
   }
 
+  static showAlert(message, className) {
+    const div = document.createElement("div");
+    div.className = `w-50 alert alert-${className}`;
+    div.appendChild(document.createTextNode(message));
+     const addBook = document.querySelector("#book-submit");
+     addBook.insertBefore(div, addBook.firstChild);
+     setTimeout(() => document.querySelector(".alert").remove(), 2000);
+  }
+
   // clear field method
   static clearField() {
-    document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
-    document.getElementById('bookId').value = '';
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("bookId").value = "";
   }
 
   // remove book from list
   static removeBook(targetElement) {
-    if (targetElement.classList.contains('delete')) {
+    if (targetElement.classList.contains("delete")) {
       targetElement.parentElement.parentElement.remove();
     }
     
