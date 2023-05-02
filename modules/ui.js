@@ -20,6 +20,15 @@ class UI {
     list.appendChild(tableRow);
   }
 
+  static showAlert(message, className) {
+    const div = document.createElement('div');
+    div.className = `w-50 alert alert-${className}`;
+    div.appendChild(document.createTextNode(message));
+    const addBook = document.querySelector('#book-submit');
+    addBook.insertBefore(div, addBook.firstChild);
+    setTimeout(() => document.querySelector('.alert').remove(), 2000);
+  }
+
   // clear field method
   static clearField() {
     document.getElementById('title').value = '';
