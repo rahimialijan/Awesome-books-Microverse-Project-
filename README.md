@@ -66,7 +66,6 @@
 
 
 - [Live Demo Link]
-- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,7 +89,7 @@ Clone this repository to your desired folder:
 
 Use the following Commands:
   - cd your-desired-folder
-  - git clone git@github.com:rahimialijan/Portfolio-Mobile.git
+  - git clone git@github.com:rahimialijan/Awesome-books-Microverse-Project-.git
 
 
 
