@@ -1,8 +1,47 @@
+body {
+  overflow: hidden;
+}
+
 section {
+  height: 85vh;
+}
+
+#contact {
   height: 78vh;
 }
 
 iframe {
-  width: 500px;
-  height: 450px;
+  width: 430px;
+  height: 380px;
+}
+
+#dateTime {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  right: 120px;
+  width: 300px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#date,
+#time,
+#hrs {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+#con {
+  padding-top: 30px;
+}
+
+.list-page,
+.add-page,
+.contact-page {
+  color: #fff;
+}
+
+footer {
+  z-index: 100;
 }

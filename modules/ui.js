@@ -44,6 +44,7 @@ class UI {
   }
 }
 
+// Navigation page
 const list = document.querySelector('.list-page');
 const addNew = document.querySelector('.add-page');
 const contactPage = document.querySelector('.contact-page');
@@ -72,5 +73,4 @@ contactPage.addEventListener('click', () => {
   contactSection.style.display = 'block';
   listSection.style.display = 'none';
 });
-
 export default UI;
