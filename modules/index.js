@@ -37,3 +37,30 @@ document.getElementById('new-book-list').addEventListener('click', (e) => {
 
 // event for display books
 document.addEventListener('DOMContentLoaded', UI.displayBook);
+
+// live date and time
+setInterval(() => {
+  const dt = new Date();
+  const hrs = dt.getHours();
+  let min = dt.getMinutes();
+  let sec = dt.getSeconds();
+
+  // Show time and date.
+  document.getElementById('time').innerHTML = `${hrs}:${min}:${sec}`;
+  document.getElementById('date').innerHTML = dt.toDateString();
+
+  if (hrs >= 12) {
+    document.getElementById('hrs').innerHTML = 'PM';
+  } else {
+    document.getElementById('hrs').innerHTML = 'AM';
+  }
+
+  const startTicking = (val) => {
+    if (val < 10) {
+      val = `0${val}`;
+    }
+    return val;
+  };
+  min = startTicking(min);
+  sec = startTicking(sec);
+});

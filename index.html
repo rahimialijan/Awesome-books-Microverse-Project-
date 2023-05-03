@@ -14,99 +14,90 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-secondary  px-5">
             <div class="container">
                 <a class="navbar-brand text-white" href="#">Awesome Books</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
-                  <div class="navbar-nav ">
-                    <a class="nav-item nav-link active text-white list-page" href="#">List <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link text-white add-page" href="#">Add New</a>
-                    <a class="nav-item nav-link text-white contact-page" href="#">Contact</a>
+                  <div class="nav d-flex justify-content-end">
+                    <a class="nav-item nav-link list-page" href="#">List</a>
+                    <a class="nav-item nav-link add-page" href="#">Add New</a>
+                    <a class="nav-item nav-link contact-page" href="#">Contact</a>
                   </div>
-                </div>
             </div>    
         </nav>
     </header>
-
-    <section id="book-list">
-        <div class="container">
-            <h1 class="display-4 text-center mt-5 text-secondary font-weight-900"><i class="bi bi-book-fill text-secondary"></i> My <span class="text-primary">Book</span> List</h1>
-            <table class="table table-striped mt-5 ">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Book Id</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="new-book-list">
-
-                </tbody>
-            </table>
+    <main>
+        <div id="dateTime">
+            <div class="text-secondary" id="date"></div>
+            <div class="text-secondary" id="time"></div>
+            <div class="text-secondary" id='hrs'></div>
         </div>
-
-    </section>
-
-    <section  id="add-book">
-        <div class="container">
-            <h1 class="display-4 text-center mt-5 text-secondary font-weight-900">Add a New Book</h1>
-            <form id="book-submit" class='mt-5'>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" class="form-control">
+        <section id="book-list">
+            <div class="container" id="con">
+                <h1 class="display-4 text-center mt-5 text-secondary font-weight-900"><i class="bi bi-book-fill text-secondary"></i> My <span class="text-primary">Book</span> List</h1>
+                <table class="table table-striped mt-5 ">
+                    <thead>
+                        <tr class="bg-secondary text-white">
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Book Id</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="new-book-list">
+                    </tbody>
+                </table>
+            </div> 
+        </section>
+        <section id="add-book">
+            <div class="container" id="con">
+                <h1 class="display-4 text-center mt-5 text-secondary font-weight-900">Add a New Book</h1>
+                <form id="book-submit" class='mt-5'>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="bookId">Book Id</label>
+                        <input type="text" id="bookId" class="form-control">
+                    </div>
+                    <div class="d-flex justify-content-center mt-2">
+                        <input type="submit" value="Add Book" class="btn btn-secondary px-5 py-2">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container d-flex justify-content-center my-5" id="con">
+                <div class="contact-details mx-5">
+                    <h1 class="display-4 text-center mt-5 text-secondary font-weight-900">Contact Information</h1>
+                    <div class="container">
+                        <p >Do you have any questions or you just want say hello?</p>
+                    <p >You can reach out to us!</p>
+                    <ul >
+                       <li>Email: alijanrahimi1990@gmail.com</li>
+                        <li>Phone Number:+923319197112</li>
+                        <li>Address: Abbottabad, Pakistan</li>
+                    </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="author">Author</label>
-                    <input type="text" id="author" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="bookId">Book Id</label>
-                    <input type="text" id="bookId" class="form-control">
-                </div>
-                <div class="d-flex justify-content-center mt-2">
-                    <input type="submit" value="Add Book" class="btn btn-secondary px-5 py-2">
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container d-flex justify-content-center my-5">
-            <div class="contact-details mx-5">
-                <h1 class="display-4 text-center mt-5 text-secondary font-weight-900">Contact Information</h1>
-                <div class="container">
-                    <p >Do you have any questions or you just want say hello?</p>
-                <p >You can reach out to us!</p>
-                <ul >
-                   <li>Email: alijanrahimi1990@gmail.com</li>
-                    <li>Phone Number:+923319197112</li>
-                    <li>Address: Abbottabad, Pakistan</li>
-                </ul>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
+                    1d6602.617610585667!2d73.25949932425188!3d34.1640215997207!2m3!
+                    1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38de31c2f9175ab3%3
+                    A0xc42aaec3200a65f3!2sNawansher%20Nawan%20Shehr%20Town%2C%20
+                    Abbottabad%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s
+                    !4v1677511410527!5m2!1sen!2s"  allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!
-                1d6602.617610585667!2d73.25949932425188!3d34.1640215997207!2m3!
-                1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38de31c2f9175ab3%3
-                A0xc42aaec3200a65f3!2sNawansher%20Nawan%20Shehr%20Town%2C%20
-                Abbottabad%2C%20Khyber%20Pakhtunkhwa%2C%20Pakistan!5e0!3m2!1sen!2s
-                !4v1677511410527!5m2!1sen!2s"  allowfullscreen="" loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Remove the container if you want to extend the Footer to full width. -->
-
+        </section>
+    </main>
     <footer class="text-center text-lg-start bg-secondary" >
-      <!-- Copyright -->
       <div class="text-center text-white p-3">
         © 2023 Copyright:
         <a class="text-white" href="#">All Rights Reserved / No Rights Reserved</a>
       </div>
-      <!-- Copyright -->
     </footer>
 
 
